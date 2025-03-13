@@ -1,23 +1,31 @@
 {
-    "calva.replConnectSequences": [
-        {
-            "projectType": "shadow-cljs",
-            "projectRootPath": [
-                "."
-            ],
-            "autoSelectForJackIn": true,
-            "cljsType": "shadow-cljs",
-            "name": "Hello RN Shadow",
-            "menuSelections": {
-                "cljsDefaultBuild": "app",
-                "cljsLaunchBuilds": [
-                    "app"
-                ]
-            }
-        }
-    ],
-    "cSpell.words": [
-        "Calva",
-        "nrepl"
-    ]
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.markdownlint": "always"
+  },
+  "calva.replConnectSequences": [
+    {
+      "projectType": "shadow-cljs",
+      "projectRootPath": [
+        "."
+      ],
+      "autoSelectForJackIn": true,
+      "cljsType": "shadow-cljs",
+      "name": "Hello RN Shadow",
+      "menuSelections": {
+        "cljsDefaultBuild": "app",
+        "cljsLaunchBuilds": [
+          "app"
+        ]
+      }
+    }
+  ],
+  "cSpell.words": [
+    "Calva",
+    "Commitizen",
+    "nrepl"
+  ]
 }

@@ -23,7 +23,7 @@ Application to share heartbeats observed by smartphone camera with others throug
       - [Command line CLJS REPL](#command-line-cljs-repl)
   - [Test](#test)
   - [Build](#build)
-  - [Using EAS Build](#using-eas-build)
+    - [Using EAS Build](#using-eas-build)
 - [Misc](#misc)
 
 ## Prerequisites
@@ -114,7 +114,7 @@ A production build involves first asking shadow-cljs to build a release, then to
    1. Enable Production mode.
    1. Start the app.
 
-### Using EAS Build
+#### Using EAS Build
 
 `expo build` is the classic way of building an Expo app, and `eas build` is the new version of `expo build`. Using EAS Build currently requires an Expo account with a paid plan subscription.
 

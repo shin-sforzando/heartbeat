@@ -1,7 +1,8 @@
 {
     "recommendations": [
         "betterthantomorrow.calva",
-        "streetsidesoftware.code-spell-checker",
-        "editorconfig.editorconfig"
+        "davidanson.vscode-markdownlint",
+        "editorconfig.editorconfig",
+        "streetsidesoftware.code-spell-checker"
     ]
 }
