@@ -52,7 +52,7 @@
        "Using: shadow-cljs+expo+reagent+re-frame"]]
      [:> StatusBar {:style "auto"}]]))
 
-(defn- about 
+(defn- about
   []
   (r/with-let [counter (rf/subscribe [:get-counter])]
     [:> rn/View {:style {:flex 1
@@ -66,7 +66,7 @@
                            :font-size     54
                            :color         :blue
                            :margin-bottom 20}}
-       "About Example App"]
+       "About heartbeat"]
       [:> rn/Text {:style {:font-weight   :bold
                            :font-size     20
                            :color         :blue

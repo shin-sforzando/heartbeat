@@ -27,7 +27,7 @@ App to be popular in cafes by highlighting heartbeats.
 
 ### Setup
 
-(T. B. D.)
+1. `npm install`
 
 ### Debug
 
