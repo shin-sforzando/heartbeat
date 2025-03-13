@@ -7,10 +7,16 @@
 
 <!-- Synopsis -->
 
+App to be popular in cafes by highlighting heartbeats.
+
 <!-- TOC -->
 
 - [Prerequisites](#prerequisites)
 - [How to](#how-to)
+  - [Setup](#setup)
+  - [Debug](#debug)
+  - [Test](#test)
+  - [Build](#build)
 - [Misc](#misc)
 
 ## Prerequisites
@@ -18,6 +24,20 @@
 (T. B. D.)
 
 ## How to
+
+### Setup
+
+(T. B. D.)
+
+### Debug
+
+(T. B. D.)
+
+### Test
+
+(T. B. D.)
+
+### Build
 
 (T. B. D.)
 

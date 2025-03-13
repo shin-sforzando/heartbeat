@@ -481,3 +481,4 @@ fabric.properties
 .lsp/.cache
 .lsp/sqlite.db
 .shadow-cljs/
+app
