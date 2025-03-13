@@ -78,9 +78,11 @@ Open Emacs and a bash shell:
        REPL init successful
 1. Once you see that the REPL is initalized, you can return to Emacs
    and confirm the REPL is connected and functional:
+
    ``` clojure
    cljs.user> (js/alert "hello world!")
    ```
+
    Which should pop-up a modal alert in the simulator, confirming the
    app is running and the REPL is connected end to end.
 
@@ -89,13 +91,14 @@ Open Emacs and a bash shell:
 1. Follow the instructions specified in [Or the Command line](#or-the-command-line).
 2. Create a Maven POM using `shadow-cljs pom`, as described in the [Shadow doc](https://shadow-cljs.github.io/docs/UsersGuide.html#_cursive).
 3. There are now two options
-   1. If you already have a project open, open the project in IntelliJ using _File | New | Project from existing sources..._ and indicating the `pom.xml` file.
+   1. If you already have a project open, open the project in IntelliJ using *File | New | Project from existing sources...* and indicating the `pom.xml` file.
    2. If you're at the welcome screen, press the "Open" button and navigate to the `pom.xml`.
-5. Ensure the project has an SDK configured using _File | Project Structure_, and checking under `Project`.
-7. The project comes with a REPL run configuration called "REPL". Run the REPL using the _Run | Run 'REPL'_ menu item, or the toolbar button.
+5. Ensure the project has an SDK configured using *File | Project Structure*, and checking under `Project`.
+7. The project comes with a REPL run configuration called "REPL". Run the REPL using the *Run | Run 'REPL'* menu item, or the toolbar button.
 8. Run the commands in [Using ClojureScript REPL](#using-clojurescript-repl)
 
 ## Or the Command line
+
 ```sh
 $ npm i
 $ npx shadow-cljs watch app
@@ -103,12 +106,14 @@ $ npx shadow-cljs watch app
 # on another terminal tab/window:
 $ npm start
 ```
-This will run Expo DevTools at http://localhost:19002/
+
+This will run Expo DevTools at <http://localhost:19002/>
 
 To run the app in browser using expo-web (react-native-web), press `w` in the same terminal after expo devtools is started.
-This should open the app automatically on your browser after the web version is built. If it does not open automatically, open http://localhost:19006/ manually on your browser.
+This should open the app automatically on your browser after the web version is built. If it does not open automatically, open <http://localhost:19006/> manually on your browser.
 
 Note that you can also run the following instead of `npm start` to run the app in browser:
+
    ```
    # same as npx expo start --web
    $ npm run web
@@ -120,13 +125,14 @@ Note that you can also run the following instead of `npm start` to run the app i
    ```
 
 ### Using ClojureScript REPL
+
 Once the app is deployed and opened in phone/simulator/emulator/browser, connect to nrepl and run the following:
 
 ```clojure
 (shadow/nrepl-select :app)
 ```
 
-NB: _Calva users don't need to do ^ this ^._
+NB: *Calva users don't need to do ^ this ^.*
 
 To test the REPL connection:
 
@@ -139,14 +145,14 @@ To test the REPL connection:
 Shadow can start a CLJS repl for you, if you prefer to stay at the terminal prompt:
 
 ```bash
-$ npx shadow-cljs cljs-repl :app
+npx shadow-cljs cljs-repl :app
 ```
 
 ## Disabling Expo Fast Refresh
 
 You will need to disable **Fast Refresh** provided by the Expo client, which conflicts with shadow-cljs hot reloading. You really want to use Shadow's, because it is way better and way faster than the Expo stuff is.
 
-For the iOS and Android there is a **Disable Fast Refresh** option in the [development menu](https://docs.expo.io/workflow/debugging/#developer-menu). NB: _Often you need to first enable it and then disable it._
+For the iOS and Android there is a **Disable Fast Refresh** option in the [development menu](https://docs.expo.io/workflow/debugging/#developer-menu). NB: *Often you need to first enable it and then disable it.*
 
 For web there may be some way to disable it via a `webpack.config` file as per [this example](https://docs.expo.dev/guides/customizing-webpack/#example). But failing that, once the app has loaded you can block requests to/from `localhost:19006/*` (the Webpack dev server) in devtools [like so](https://github.com/facebook/create-react-app/issues/2519#issuecomment-318867289), for instance by right-clicking on a request in the Network tab, selecting `Block request URL`, then editing the pattern. In Chrome this looks something like:
 
@@ -175,6 +181,7 @@ The steps below provide an example of using EAS Build to build an apk file to ru
 0. Log into your Expo account
 0. Configure EAS Build in your project with `eas build:configure`.
 0. Make your eas.json file contents look like this:
+
     ```json
     {
       "build": {
@@ -191,6 +198,7 @@ The steps below provide an example of using EAS Build to build an apk file to ru
       }
     }
     ```
+
 0. Commit your changes, run `eas build --profile development`, and follow the prompts.
 0. Navigate to the URL given by the command to monitor the build. When it completes, download the apk and install it on your device or emulator.
 

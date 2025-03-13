@@ -2,14 +2,21 @@
     "calva.replConnectSequences": [
         {
             "projectType": "shadow-cljs",
-            "projectRootPath": ["."],
+            "projectRootPath": [
+                "."
+            ],
             "autoSelectForJackIn": true,
             "cljsType": "shadow-cljs",
             "name": "Hello RN Shadow",
             "menuSelections": {
-                 "cljsDefaultBuild": "app",
-                 "cljsLaunchBuilds": ["app"]
+                "cljsDefaultBuild": "app",
+                "cljsLaunchBuilds": [
+                    "app"
+                ]
             }
         }
+    ],
+    "cSpell.words": [
+        "Calva"
     ]
 }

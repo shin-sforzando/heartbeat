@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="REPL" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
-    <module name="rn-rf-shadow" />
+    <module name="heartbeat" />
     <setting name="host" value="" />
     <setting name="port" value="0" />
     <setting name="replType" value="NREPL" />
