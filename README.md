@@ -12,6 +12,8 @@ Application to share heartbeats observed by smartphone camera with others throug
 <!-- TOC -->
 
 - [Prerequisites](#prerequisites)
+  - [Required Tools](#required-tools)
+  - [System Requirements](#system-requirements)
 - [How to](#how-to)
   - [Setup](#setup)
   - [Debug](#debug)
@@ -22,19 +24,62 @@ Application to share heartbeats observed by smartphone camera with others throug
       - [Using ClojureScript REPL](#using-clojurescript-repl)
       - [Command line CLJS REPL](#command-line-cljs-repl)
   - [Test](#test)
+    - [REPL-Driven Testing](#repl-driven-testing)
+    - [Planned Testing Strategy](#planned-testing-strategy)
   - [Build](#build)
     - [Using EAS Build](#using-eas-build)
 - [Misc](#misc)
 
 ## Prerequisites
 
-(T. B. D.)
+### Required Tools
+
+- Node.js
+- Java Development Kit (JDK) (v11 or later)
+
+### System Requirements
+
+- Operating Systems:
+  - macOS (Intel or Apple Silicon)
+  - Windows 10/11
+  - Linux (major distributions)
+- Mobile Testing:
+  - iOS device or simulator (macOS only)
+  - Android device or emulator
+- Editor
+  - VS Code + Calva extension: Optimal for ClojureScript development with integrated REPL
+
+> [!NOTE] While the application is designed to work on multiple platforms (Windows, macOS, Linux, iOS, Android), the current development and testing is primarily conducted on **macOS** with **iOS simulator** only. Contributions for testing and improving compatibility with other platforms are welcome.
 
 ## How to
 
 ### Setup
 
-1. `npm install`
+1. **Clone the repository**:
+
+   ```shell
+   git clone https://github.com/shin-sforzando/heartbeat.git
+   cd heartbeat
+   ```
+
+2. **Install dependencies**:
+
+   ```shell
+   npm install
+   ```
+
+3. **Configure development environment**:
+   - For VS Code users: Install the Calva extension
+   - Set up your preferred editor with appropriate ClojureScript support
+   - For iOS development on macOS: Ensure Xcode and iOS simulator are installed
+   - For Android development: Install Android Studio and set up an emulator
+
+4. **Verify installation**:
+
+   ```shell
+   npx shadow-cljs --version
+   npx expo --version
+   ```
 
 ### Debug
 
@@ -67,8 +112,8 @@ Of course you should try to fire up the app on all simulators, emulators and pho
 #### CLI
 
 ```shell
-$ npx shadow-cljs watch app
-$ npm start
+npx shadow-cljs watch app
+npm start
 ```
 
 This will run Expo DevTools at <http://localhost:19002/>
@@ -102,14 +147,37 @@ npx shadow-cljs cljs-repl :app
 
 ### Test
 
-(T. B. D.)
+Currently, the project is in early development stage and formal testing infrastructure is not yet implemented. However, you can use the following approaches for testing during development:
+
+#### REPL-Driven Testing
+
+The most effective way to test ClojureScript code during development is through REPL-driven development:
+
+1. Connect to the REPL as described in the Debug section
+2. Evaluate functions and components interactively
+3. Use `js/console.log` or `js/alert` to verify behavior
+
+#### Planned Testing Strategy
+
+Future test implementation will include:
+
+- **Unit Tests**: Using `cljs.test` for testing individual functions and components
+- **Integration Tests**: Testing the interaction between different parts of the application
+- **End-to-End Tests**: Using Expo's testing tools for full application testing
+
+To run tests once implemented:
+
+```shell
+# This command will be available in future updates
+npx shadow-cljs compile test
+```
 
 ### Build
 
 A production build involves first asking shadow-cljs to build a release, then to ask Expo to work in Production Mode.
 
 1. Kill the watch and expo tasks.
-1. Execute `shadow-cljs release app`
+1. Execute `npx shadow-cljs release app`
 1. Start the expo task (as per above)
    1. Enable Production mode.
    1. Start the app.
