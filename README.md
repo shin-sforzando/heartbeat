@@ -23,9 +23,6 @@ Application to share heartbeats observed by smartphone camera with others throug
     - [CLI](#cli)
       - [Using ClojureScript REPL](#using-clojurescript-repl)
       - [Command line CLJS REPL](#command-line-cljs-repl)
-  - [Test](#test)
-    - [REPL-Driven Testing](#repl-driven-testing)
-    - [Planned Testing Strategy](#planned-testing-strategy)
   - [Build](#build)
     - [Using EAS Build](#using-eas-build)
 - [Misc](#misc)
@@ -49,7 +46,8 @@ Application to share heartbeats observed by smartphone camera with others throug
 - Editor
   - VS Code + Calva extension: Optimal for ClojureScript development with integrated REPL
 
-> [!NOTE] While the application is designed to work on multiple platforms (Windows, macOS, Linux, iOS, Android), the current development and testing is primarily conducted on **macOS** with **iOS simulator** only. Contributions for testing and improving compatibility with other platforms are welcome.
+> [!NOTE]
+> While the application is designed to work on multiple platforms (Windows, macOS, Linux, iOS, Android), the current development and testing is primarily conducted on **macOS** with **iOS simulator** only. Contributions for testing and improving compatibility with other platforms are welcome.
 
 ## How to
 
@@ -143,33 +141,6 @@ Shadow can start a CLJS repl for you, if you prefer to stay at the terminal prom
 
 ```shell
 npx shadow-cljs cljs-repl :app
-```
-
-### Test
-
-Currently, the project is in early development stage and formal testing infrastructure is not yet implemented. However, you can use the following approaches for testing during development:
-
-#### REPL-Driven Testing
-
-The most effective way to test ClojureScript code during development is through REPL-driven development:
-
-1. Connect to the REPL as described in the Debug section
-2. Evaluate functions and components interactively
-3. Use `js/console.log` or `js/alert` to verify behavior
-
-#### Planned Testing Strategy
-
-Future test implementation will include:
-
-- **Unit Tests**: Using `cljs.test` for testing individual functions and components
-- **Integration Tests**: Testing the interaction between different parts of the application
-- **End-to-End Tests**: Using Expo's testing tools for full application testing
-
-To run tests once implemented:
-
-```shell
-# This command will be available in future updates
-npx shadow-cljs compile test
 ```
 
 ### Build
